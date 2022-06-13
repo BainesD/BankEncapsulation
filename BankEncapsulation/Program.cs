@@ -10,14 +10,15 @@ namespace BankEncapsulation
             int response;
             do
             {
-                Console.WriteLine("Hello! What would you like to do today? \n1 - Deposit\n2 - Get Balance.\n3 - Sign Out");
+                Console.WriteLine("Hello! What would you like to do today? \n1 - Deposit\n2 - Get Balance\n3 - Sign Out");
                 var userInput = int.TryParse(Console.ReadLine(), out response);
 
                 if (!userInput)
                 {
                     do
                     {
-                        Console.WriteLine("I'm sorry. That is not a valid response. Please try again.");
+                        Console.WriteLine("I'm sorry. That is not a valid response. Please try again. \nYour options are:\n1 - Deposit \n2- Get Balance\n3 - Sign Out");
+                        userInput = int.TryParse(Console.ReadLine(), out response);
                     }
                     while (!userInput);
                 }
